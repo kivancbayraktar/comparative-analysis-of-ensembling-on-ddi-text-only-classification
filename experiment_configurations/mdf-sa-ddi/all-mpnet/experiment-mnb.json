@@ -2,7 +2,7 @@
     "experiments": [
         {
             "type": "general",
-            "library": "mnb_wrapper.MultinomialNBModelWrapper",
+            "library": "custom_wrappers.MultinomialNBModelWrapper",
             "experiment_name": "MDF-SA-DDI Dataset Experiment (all-mpnet) - Multinomial Naive Bayes",
             "experiment_description": "",
             "default_model": {

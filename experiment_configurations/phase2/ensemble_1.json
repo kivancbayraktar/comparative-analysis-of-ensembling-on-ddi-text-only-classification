@@ -9,7 +9,7 @@
             "multi_modal": [
                 {
                     "ensemble_task": "meta_learner",
-                    "library": "xgboost_wrapper.XGBoostModelWrapper",
+                    "library": "custom_wrappers.XGBoostModelWrapper",
                     "force_stack": true,
                     "reduce_dimensions": true,
                     "name": "ensemble_stacking_xgboost",
@@ -29,7 +29,7 @@
                 },
                 {
                     "ensemble_task": "meta_learner",
-                    "library": "logistic_regression_wrapper.LogisticRegressionModelWrapper",
+                    "library": "custom_wrappers.LogisticRegressionModelWrapper",
                     "name": "ensemble_stacking_logistic_regression",
                     "force_stack": true,
                     "reduce_dimensions": true,
@@ -41,7 +41,7 @@
                 },
                 {
                     "ensemble_task": "meta_learner",
-                    "library": "mnb_wrapper.MultinomialNBModelWrapper",
+                    "library": "custom_wrappers.MultinomialNBModelWrapper",
                     "name": "ensemble_stacking_mnb",
                     "force_stack": true,
                     "reduce_dimensions": true,
@@ -100,7 +100,7 @@
                 },
                 {
                     "ensemble_task": "base_model",
-                    "library": "xgboost_wrapper.XGBoostModelWrapper",
+                    "library": "custom_wrappers.XGBoostModelWrapper",
                     "name": "xgboost_merged_text_embedding",
                     "input": "merged_text_embedding",
                     "force_stack": false,

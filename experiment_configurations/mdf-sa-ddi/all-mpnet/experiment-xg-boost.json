@@ -2,7 +2,7 @@
     "experiments": [
         {
             "type": "general",
-            "library": "xgboost_wrapper.XGBoostModelWrapper",
+            "library": "custom_wrappers.XGBoostModelWrapper",
             "experiment_name": "MDF-SA-DDI Dataset Experiment (all-mpnet) - XGBoost",
             "experiment_description": "",
             "default_model": {

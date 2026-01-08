@@ -2,7 +2,7 @@
     "experiments": [
         {
             "type": "general",
-            "library": "catboost_wrapper.CatBoostModelWrapper",
+            "library": "custom_wrappers.CatBoostModelWrapper",
             "experiment_name": "MDF-SA-DDI Dataset Experiment (all-mpnet) - CatBoost",
             "experiment_description": "",
             "default_model": {

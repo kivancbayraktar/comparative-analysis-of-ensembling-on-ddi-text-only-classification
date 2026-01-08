@@ -2,7 +2,7 @@
     "experiments": [
         {
             "type": "general",
-            "library": "catboost_wrapper.CatBoostModelWrapper",
+            "library": "custom_wrappers.CatBoostModelWrapper",
             "experiment_name": "DDIMDL Dataset Experiment (all-mpnet) - CatBoost",
             "experiment_description": "",
             "default_model": {

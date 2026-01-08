@@ -2,7 +2,7 @@
     "experiments": [
         {
             "type": "general",
-            "library": "logistic_regression_wrapper.LogisticRegressionModelWrapper",
+            "library": "custom_wrappers.LogisticRegressionModelWrapper",
             "experiment_name": "DDIMDL Dataset Experiment (bge-large) - Logistic Regression",
             "experiment_description": "",
             "default_model": {
