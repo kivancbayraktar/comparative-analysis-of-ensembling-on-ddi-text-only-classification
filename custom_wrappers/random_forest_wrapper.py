@@ -195,7 +195,7 @@ class RandomForestModelWrapper(ModelWrapper):
 
         def evaluate_and_log(artifact_uri=None):
 
-            best_model, best_model_key = self.fit()
+            best_model, best_model_key, _ = self.fit()
             self.best_model = best_model
 
             # Predict

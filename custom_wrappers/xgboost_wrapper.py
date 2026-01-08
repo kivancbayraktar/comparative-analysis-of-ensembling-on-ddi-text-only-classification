@@ -273,7 +273,7 @@ class XGBoostModelWrapper(ModelWrapper):
 
         def evaluate_and_log(artifact_uri=None):
             # Fit the model
-            best_model, best_model_key = self.fit()
+            best_model, best_model_key, _  = self.fit()
             self.best_model = best_model
 
             # Make predictions
