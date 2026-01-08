@@ -2,7 +2,7 @@
     "experiments": [
         {
             "type": "general",
-            "library": "custom_wrapper.XGBoostModelWrapper",
+            "library": "custom_wrappers.XGBoostModelWrapper",
             "experiment_name": "DDIMDL Dataset Experiment (all-mpnet) - XGBoost",
             "experiment_description": "",
             "default_model": {
