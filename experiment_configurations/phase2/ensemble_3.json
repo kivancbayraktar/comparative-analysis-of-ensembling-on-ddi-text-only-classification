@@ -1,0 +1,159 @@
+{
+    "experiments": [
+        {
+            "type": "ensemble",
+            "library": "ddi_fw.ml.GenericEnsembleWrapper",
+            "ensemble_strategy": "voting,stacking",
+            "experiment_name": "MDFSADDI Dataset Experiment (all-mpnet) - Ensemble",
+            "experiment_description": "",
+            "multi_modal": [
+                {
+                    "ensemble_task": "meta_learner",
+                    "library": "xgboost_wrapper.XGBoostModelWrapper",
+                    "force_stack": true,
+                    "reduce_dimensions": true,
+                    "name": "ensemble_stacking_xgboost",
+                    "model_type": "experiment_configurations.models.DummyModel",
+                    "params": {
+                        "objective": "multi:softprob",
+                        "eval_metric": "mlogloss",
+                        "tree_method": "hist",
+                        "device": "cuda",
+                        "num_rounds": 100,
+                        "max_depth": 8,
+                        "eta": 0.1,
+                        "silent": 1,
+                        "subsample": 0.8,
+                        "colsample_bytree": 0.8
+                    }
+                },
+                {
+                    "ensemble_task": "meta_learner",
+                    "library": "logistic_regression_wrapper.LogisticRegressionModelWrapper",
+                    "name": "ensemble_stacking_logistic_regression",
+                    "force_stack": true,
+                    "reduce_dimensions": true,
+                    "model_type": "experiment_configurations.models.DummyModel",
+                    "params": {
+                        "batch_size": 128,
+                        "epochs": 100
+                    }
+                },
+                {
+                    "ensemble_task": "meta_learner",
+                    "library": "mnb_wrapper.MultinomialNBModelWrapper",
+                    "name": "ensemble_stacking_mnb",
+                    "force_stack": true,
+                    "reduce_dimensions": true,
+                    "model_type": "experiment_configurations.models.DummyModel",
+                    "params": {
+                        "batch_size": 128,
+                        "epochs": 100
+                    }
+                },
+                {
+                    "ensemble_task": "meta_learner",
+                    "library": "tensorflow",
+                    "name": "ensemble_stacking_cnn",
+                    "force_stack": true,
+                    "model_type": "experiment_configurations.models.CNN",
+                    "params": {
+                        "batch_size": 128,
+                        "epochs": 100
+                    }
+                },
+                {
+                    "ensemble_task": "meta_learner",
+                    "library": "tensorflow",
+                    "name": "ensemble_stacking_dnn",
+                    "force_stack": true,
+                    "reduce_dimensions": true,
+                    "model_type": "experiment_configurations.models.DNN",
+                    "params": {
+                        "batch_size": 128,
+                        "epochs": 100
+                    }
+                },
+                {
+                    "ensemble_task": "base_model",
+                    "library": "tensorflow",
+                    "name": "cnn_merged_text_embedding",
+                    "input": "merged_text_embedding",
+                    "force_stack": true,
+                    "model_type": "experiment_configurations.models.CNN",
+                    "params": {
+                        "batch_size": 128,
+                        "epochs": 100
+                    }
+                },
+                {
+                    "ensemble_task": "base_model",
+                    "library": "tensorflow",
+                    "name": "dnn_merged_text_embedding",
+                    "input": "merged_text_embedding",
+                    "force_stack": false,
+                    "model_type": "experiment_configurations.models.DNN",
+                    "params": {
+                        "batch_size": 128,
+                        "epochs": 100
+                    }
+                },
+                {
+                    "ensemble_task": "base_model",
+                    "library": "xgboost_wrapper.XGBoostModelWrapper",
+                    "name": "xgboost_merged_text_embedding",
+                    "input": "merged_text_embedding",
+                    "force_stack": false,
+                    "model_type": "experiment_configurations.models.DummyModel",
+                    "params": {
+                        "objective": "multi:softprob",
+                        "eval_metric": "mlogloss",
+                        "tree_method": "hist",
+                        "device": "cuda",
+                        "num_rounds": 100,
+                        "max_depth": 8,
+                        "eta": 0.1,
+                        "silent": 1,
+                        "subsample": 0.8,
+                        "colsample_bytree": 0.8
+                    }
+                }
+            ],
+            "tracking_config": {
+                "use_tracking": "true",
+                "library": "mlflow",
+                "params": {
+                    "mlflow": {
+                        "tracking_uri": "sqlite:///mlflow.db",
+                        "artifact_location": "mlflow",
+                        "experiment_tags": {
+                            "project_name": "MDFSADDI Dataset Experiment (all-mpnet) - Ensemble",
+                            "project_quarter": "Q4-2025",
+                            "mlflow.note.content": ""
+                        }
+                    }
+                }
+            },
+            "dataset": {
+                "dataset_type": "research_datasets.MDFSADDIDataset",
+                "dataset_splitter_type": "ddi_fw.datasets.DatasetSplitter",
+                "columns": [
+                    "merged_text"
+                ],
+                "input_processing": [
+                    {
+                        "column": "merged_text_embedding",
+                        "flatten": true,
+                        "stack": true
+                    } 
+                ],
+                "additional_config": {}
+            },
+            "vector_databases": {
+                "db_type": "ddi_fw.langchain.FaissVectorStoreManager",
+                "vector_db_persist_directory": "embeddings/00fcab98-6528-4575-b8ce-349b557dab3a/faiss/7f3d749c-9460-400f-b54d-64941d18eb24/no_op",
+                "embedding_pooling_strategy": "ddi_fw.langchain.SumPoolingStrategy"
+            }
+        }
+    ]
+}

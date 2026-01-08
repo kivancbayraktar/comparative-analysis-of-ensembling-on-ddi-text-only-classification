@@ -1,0 +1,346 @@
+[
+    {
+        "id": "988db6fb-3487-4c74-9eed-10f38da75dee",
+        "name": "BAAI/bge-large-en-v1.5",
+        "kaggle_id": "kivancbayraktar/988db6fb-3487-4c74-9eed-10f38da75dee",
+        "kaggle_title": "BAAI/bge-large-en-v1.5",
+        "kaggle_description": "This dataset contains text data from the DrugBank database; embeddings were created using BAAI/bge-large-en-v1.5",
+        "kaggle_licenses": [
+            {
+                "name": "CC0-1.0"
+            }
+        ],
+        "embedding_model_type": "langchain.embeddings.HuggingFaceEmbeddings",
+        "text_splitters_types": [
+            {
+                "type": "langchain.text_splitter.SentenceTransformersTokenTextSplitter",
+                "suffix": "chunk",
+                "params": {
+                    "model_name": "BAAI/bge-large-en-v1.5",
+                    "chunk_overlap": 50
+                }
+            },
+            {
+                "type": "ddi_fw.langchain.SentenceSplitter",
+                "suffix": "sentence"
+            }
+        ],
+        "columns": [
+            "id",
+            "name"
+        ],
+        "page_content_columns": [
+            "description",
+            "indication",
+            "pharmacodynamics",
+            "mechanism_of_action"
+        ],
+        "batch_size": 1024,
+        "model_kwargs": {}
+    },
+    {
+        "id": "217a2762-1641-4c09-98f4-0edc4c14a2f9",
+        "name": "NeuML/pubmedbert-base-embeddings",
+        "kaggle_id": "kivancbayraktar/217a2762-1641-4c09-98f4-0edc4c14a2f9",
+        "kaggle_title": "NeuML/pubmedbert-base-embeddings",
+        "kaggle_description": "This dataset contains text data from the DrugBank database; embeddings were created using NeuML/pubmedbert-base-embeddings",
+        "kaggle_licenses": [
+            {
+                "name": "CC0-1.0"
+            }
+        ],
+        "embedding_model_type": "langchain.embeddings.HuggingFaceEmbeddings",
+        "text_splitters_types": [
+            {
+                "type": "langchain.text_splitter.SentenceTransformersTokenTextSplitter",
+                "suffix": "chunk",
+                "params": {
+                    "model_name": "NeuML/pubmedbert-base-embeddings",
+                    "chunk_overlap": 50
+                }
+            },
+            {
+                "type": "ddi_fw.langchain.SentenceSplitter",
+                "suffix": "sentence"
+            }
+        ],
+        "columns": [
+            "id",
+            "name"
+        ],
+        "page_content_columns": [
+            "description",
+            "indication",
+            "pharmacodynamics",
+            "mechanism_of_action"
+        ],
+        "batch_size": 1024,
+        "model_kwargs": {}
+    },
+    {
+        "id": "f433ea63-1dea-4475-a998-4405e2fea68f",
+        "name": "sentence-transformers/all-MiniLM-L6-v2",
+        "kaggle_id": "kivancbayraktar/f433ea63-1dea-4475-a998-4405e2fea68f",
+        "kaggle_title": "sentence-transformers/all-MiniLM-L6-v2",
+        "kaggle_description": "This dataset contains text data from the DrugBank database; embeddings were created using sentence-transformers/all-MiniLM-L6-v2",
+        "kaggle_licenses": [
+            {
+                "name": "CC0-1.0"
+            }
+        ],
+        "embedding_model_type": "langchain.embeddings.HuggingFaceEmbeddings",
+        "text_splitters_types": [
+            {
+                "type": "langchain.text_splitter.SentenceTransformersTokenTextSplitter",
+                "suffix": "chunk",
+                "params": {
+                    "model_name": "sentence-transformers/all-MiniLM-L6-v2",
+                    "chunk_overlap": 50
+                }
+            },
+            {
+                "type": "ddi_fw.langchain.SentenceSplitter",
+                "suffix": "sentence"
+            }
+        ],
+        "columns": [
+            "id",
+            "name"
+        ],
+        "page_content_columns": [
+            "description",
+            "indication",
+            "pharmacodynamics",
+            "mechanism_of_action"
+        ],
+        "batch_size": 1024,
+        "model_kwargs": {}
+    },
+    {
+        "id": "44d25a58-1c57-42b9-835d-467bb30192db",
+        "name": "sentence-transformers/all-MiniLM-L12-v2",
+        "kaggle_id": "kivancbayraktar/44d25a58-1c57-42b9-835d-467bb30192db",
+        "kaggle_title": "sentence-transformers/all-MiniLM-L12-v2",
+        "kaggle_description": "This dataset contains text data from the DrugBank database; embeddings were created using sentence-transformers/all-MiniLM-L12-v2",
+        "kaggle_licenses": [
+            {
+                "name": "CC0-1.0"
+            }
+        ],
+        "embedding_model_type": "langchain.embeddings.HuggingFaceEmbeddings",
+        "text_splitters_types": [
+            {
+                "type": "langchain.text_splitter.SentenceTransformersTokenTextSplitter",
+                "suffix": "chunk",
+                "params": {
+                    "model_name": "sentence-transformers/all-MiniLM-L12-v2",
+                    "chunk_overlap": 50
+                }
+            },
+            {
+                "type": "ddi_fw.langchain.SentenceSplitter",
+                "suffix": "sentence"
+            }
+        ],
+        "columns": [
+            "id",
+            "name"
+        ],
+        "page_content_columns": [
+            "description",
+            "indication",
+            "pharmacodynamics",
+            "mechanism_of_action"
+        ],
+        "batch_size": 1024,
+        "model_kwargs": {}
+    },
+    {
+        "id": "7f3d749c-9460-400f-b54d-64941d18eb24",
+        "name": "sentence-transformers/all-mpnet-base-v2",
+        "kaggle_id": "kivancbayraktar/7f3d749c-9460-400f-b54d-64941d18eb24",
+        "kaggle_title": "sentence-transformers/all-mpnet-base-v2",
+        "kaggle_description": "This dataset contains text data from the DrugBank database; embeddings were created using sentence-transformers/all-mpnet-base-v2",
+        "kaggle_licenses": [
+            {
+                "name": "CC0-1.0"
+            }
+        ],
+        "embedding_model_type": "langchain.embeddings.HuggingFaceEmbeddings",
+        "text_splitters_types": [
+            {
+                "type": "langchain.text_splitter.SentenceTransformersTokenTextSplitter",
+                "suffix": "chunk",
+                "params": {
+                    "model_name": "sentence-transformers/all-mpnet-base-v2",
+                    "chunk_overlap": 50
+                }
+            },
+            {
+                "type": "ddi_fw.langchain.SentenceSplitter",
+                "suffix": "sentence"
+            }
+        ],
+        "columns": [
+            "id",
+            "name"
+        ],
+        "page_content_columns": [
+            "description",
+            "indication",
+            "pharmacodynamics",
+            "mechanism_of_action"
+        ],
+        "batch_size": 1024,
+        "model_kwargs": {}
+    },
+    {
+        "id": "ce58410d-eb1e-4d58-b2b8-ad66ffcf692a",
+        "name": "pritamdeka/S-PubMedBert-MS-MARCO",
+        "kaggle_id": "kivancbayraktar/ce58410d-eb1e-4d58-b2b8-ad66ffcf692a",
+        "kaggle_title": "pritamdeka/S-PubMedBert-MS-MARCO",
+        "kaggle_description": "This dataset contains text data from the DrugBank database; embeddings were created using pritamdeka/S-PubMedBert-MS-MARCO",
+        "kaggle_licenses": [
+            {
+                "name": "CC0-1.0"
+            }
+        ],
+        "embedding_model_type": "langchain.embeddings.HuggingFaceEmbeddings",
+        "text_splitters_types": [
+            {
+                "type": "langchain.text_splitter.SentenceTransformersTokenTextSplitter",
+                "suffix": "chunk",
+                "params": {
+                    "model_name": "pritamdeka/S-PubMedBert-MS-MARCO",
+                    "chunk_overlap": 50
+                }
+            },
+            {
+                "type": "ddi_fw.langchain.SentenceSplitter",
+                "suffix": "sentence"
+            }
+        ],
+        "columns": [
+            "id",
+            "name"
+        ],
+        "page_content_columns": [
+            "description",
+            "indication",
+            "pharmacodynamics",
+            "mechanism_of_action"
+        ],
+        "batch_size": 1024,
+        "model_kwargs": {}
+    },
+    {
+        "id": "0295501b-e673-43e9-af91-7d06ec21cb7d",
+        "name": "pritamdeka/BioBERT-mnli-snli-scinli-scitail-mednli-stsb",
+        "kaggle_id": "kivancbayraktar/0295501b-e673-43e9-af91-7d06ec21cb7d",
+        "kaggle_title": "pritamdeka/BioBERT-mnli-snli-scinli-scitail-mednli-stsb",
+        "kaggle_description": "This dataset contains text data from the DrugBank database; embeddings were created using pritamdeka/BioBERT-mnli-snli-scinli-scitail-mednli-stsb",
+        "kaggle_licenses": [
+            {
+                "name": "CC0-1.0"
+            }
+        ],
+        "embedding_model_type": "langchain.embeddings.HuggingFaceEmbeddings",
+        "text_splitters_types": [
+            {
+                "type": "langchain.text_splitter.SentenceTransformersTokenTextSplitter",
+                "suffix": "chunk",
+                "params": {
+                    "model_name": "pritamdeka/BioBERT-mnli-snli-scinli-scitail-mednli-stsb",
+                    "chunk_overlap": 50
+                }
+            },
+            {
+                "type": "ddi_fw.langchain.SentenceSplitter",
+                "suffix": "sentence"
+            }
+        ],
+        "columns": [
+            "id",
+            "name"
+        ],
+        "page_content_columns": [
+            "description",
+            "indication",
+            "pharmacodynamics",
+            "mechanism_of_action"
+        ],
+        "batch_size": 1024,
+        "model_kwargs": {}
+    },
+    {
+        "id": "1d9e6c3b-2ff0-43cb-8946-2c1550f48394",
+        "name": "jxm/cde-small-v1",
+        "kaggle_id": "kivancbayraktar/1d9e6c3b-2ff0-43cb-8946-2c1550f48394",
+        "kaggle_title": "jxm/cde-small-v1",
+        "kaggle_description": "This dataset contains text data from the DrugBank database; embeddings were created using jxm/cde-small-v1",
+        "kaggle_licenses": [
+            {
+                "name": "CC0-1.0"
+            }
+        ],
+        "embedding_model_type": "embeddings.ContextualDocumentEmbeddings2",
+        "text_splitters_types": [
+            {
+                "type": "langchain.text_splitter.SentenceTransformersTokenTextSplitter",
+                "suffix": "chunk"
+            },
+            {
+                "type": "ddi_fw.langchain.SentenceSplitter",
+                "suffix": "sentence"
+            }
+        ],
+        "columns": [
+            "id",
+            "name"
+        ],
+        "page_content_columns": [
+            "description",
+            "indication",
+            "pharmacodynamics",
+            "mechanism_of_action"
+        ],
+        "batch_size": 512,
+        "model_kwargs": {}
+    },
+    {
+        "id": "dc86b380-7169-4d78-8090-9b51dad8e970",
+        "name": "kivanc/test",
+        "kaggle_id": "kivancbayraktar/dc86b380-7169-4d78-8090-9b51dad8e970",
+        "kaggle_title": "kivanc/test",
+        "kaggle_description": "This dataset contains text data from the DrugBank database; embeddings were created using kivanc/test",
+        "kaggle_licenses": [
+            {
+                "name": "CC0-1.0"
+            }
+        ],
+        "embedding_model_type": "langchain.embeddings.HuggingFaceEmbeddings",
+        "text_splitters_types": [
+            {
+                "type": "langchain.text_splitter.SentenceTransformersTokenTextSplitter",
+                "suffix": "chunk"
+            },
+            {
+                "type": "ddi_fw.langchain.SentenceSplitter",
+                "suffix": "sentence"
+            }
+        ],
+        "columns": [
+            "id",
+            "name"
+        ],
+        "page_content_columns": [
+            "description",
+            "indication",
+            "pharmacodynamics",
+            "mechanism_of_action"
+        ],
+        "batch_size": 1024,
+        "partial_dataframe_size": 1000,
+        "model_kwargs": {}
+    }
+]

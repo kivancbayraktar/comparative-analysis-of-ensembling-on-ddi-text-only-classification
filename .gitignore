@@ -1,0 +1,17 @@
+.venv
+.env
+research_datasets/openfda/*/data/openfda_drugbank.db
+data/*.json
+open-fda.db
+data/zips
+open-fda.zip
+pdfs
+__pycache__
+extracted_texts
+leaflets
+deneme
+bbeedd80-745e-4380-83f9-40cc5a8d674f.xml
+output.md
+extracted/md
+extracted/xml
+drugbank.db

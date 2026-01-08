@@ -1,0 +1,76 @@
+{
+    "experiments": [
+        {
+            "type": "general",
+            "library": "tensorflow",
+            "experiment_name": "DDIMDL Dataset Experiment (all-mpnet) - DNN",
+            "experiment_description": "",
+            "default_model": {
+                "model_type": "experiment_configurations.models.DNN",
+                "params": {
+                    "batch_size": 128,
+                    "epochs": 100
+                }
+            },
+            "tracking_config": {
+                "use_tracking": "true",
+                "library": "mlflow",
+                "params": {
+                    "mlflow": {
+                        "tracking_uri": "sqlite:///mlflow.db",
+                        "artifact_location": "mlflow",
+                        "experiment_tags": {
+                            "project_name": "DDIMDL Dataset Experiment",
+                            "project_quarter": "Q4-2025",
+                            "mlflow.note.content": ""
+                        }
+                    }
+                }
+            },
+            "dataset": {
+                "dataset_type": "research_datasets.DDIMDLDatasetPhase1",
+                "dataset_splitter_type": "ddi_fw.datasets.DatasetSplitter",
+                "columns": [
+                    "merged_text",
+                    "description",
+                    "indication",
+                    "mechanism_of_action",
+                    "pharmacodynamics"
+                ],
+                "input_processing": [
+                    {
+                        "column": "merged_text_embedding",
+                        "flatten": true,
+                        "stack": true
+                    },
+                    {
+                        "column": "description_embedding",
+                        "flatten": true,
+                        "stack": true
+                    },
+                    {
+                        "column": "indication_embedding",
+                        "flatten": true,
+                        "stack": true
+                    },
+                    {
+                        "column": "mechanism_of_action_embedding",
+                        "flatten": true,
+                        "stack": true
+                    },
+                    {
+                        "column": "pharmacodynamics_embedding",
+                        "flatten": true,
+                        "stack": true
+                    }
+                ],
+                "additional_config": {}
+            },
+            "vector_databases": {
+                "db_type": "ddi_fw.langchain.FaissVectorStoreManager",
+                "vector_db_persist_directory": "embeddings/00fcab98-6528-4575-b8ce-349b557dab3a/faiss/7f3d749c-9460-400f-b54d-64941d18eb24/no_op",
+                "embedding_pooling_strategy": "ddi_fw.langchain.SumPoolingStrategy"
+            }
+        }
+    ]
+}
